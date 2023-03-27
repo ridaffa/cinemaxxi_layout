@@ -11,8 +11,16 @@ This project is a Java application that displays a layout of a Cinema XXI.
 
 To compile the project, run the following command:
 
+for windows:
+
 ```
 javac -d bin -cp .\lib\* .\src\cinema\*.java .\src\handler\*.java .\src\helper\*.java .\src\App.java
+```
+
+for linux:
+
+```
+javac -d bin -cp ./lib/* ./src/cinema/*.java ./src/handler/*.java ./src/helper/*.java ./src/App.java
 ```
 
 ## Running
@@ -27,12 +35,28 @@ java -cp bin App
 
 To compile the tests, run the following command:
 
+for windows:
+
 ```
 javac -d test -cp .\lib\junit-platform-console-standalone-1.9.2.jar .\src\cinema\*.java .\src\helper\*.java
 ```
 
+for linux/unix:
+
+```
+javac -d test -cp ./lib/junit-platform-console-standalone-1.9.2.jar ./src/cinema/*.java ./src/helper/*.java
+```
+
 To run the tests, execute the following command:
+
+for windows:
 
 ```
 java -jar .\lib\junit-platform-console-standalone-1.9.2.jar --class-path test --scan-class-path
+```
+
+for linux/unix:
+
+```
+java -jar ./lib/junit-platform-console-standalone-1.9.2.jar --class-path test --scan-class-path
 ```
