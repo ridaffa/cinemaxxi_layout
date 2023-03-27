@@ -20,7 +20,7 @@ javac -d bin -cp .\lib\* .\src\cinema\*.java .\src\handler\*.java .\src\helper\*
 for linux:
 
 ```
-javac -d bin -cp ./lib/* ./src/cinema/*.java ./src/handler/*.java ./src/helper/*.java ./src/App.java
+javac -d bin -cp "lib/*" src/**/*.java src/App.java
 ```
 
 ## Running
