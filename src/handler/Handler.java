@@ -51,12 +51,12 @@ public class Handler {
     return seatNumber;
   }
 
-  public static void handleReport(Bioskop cinema) {
+  public static void handleReport(Cinema cinema) {
     System.out.println("=".repeat(20) + " Laporan Denah Studio " + "=".repeat(20));
     System.out.println(cinema.report().message);
   }
 
-  public static void handleBookSeat(Scanner scanner, Bioskop cinema) {
+  public static void handleBookSeat(Scanner scanner, Cinema cinema) {
     try {
       boolean success = false;
       do {
@@ -76,7 +76,7 @@ public class Handler {
     }
   }
 
-  public static void handleCancelSeat(Scanner scanner, Bioskop cinema) {
+  public static void handleCancelSeat(Scanner scanner, Cinema cinema) {
     try {
       boolean success = false;
       do {
@@ -96,12 +96,13 @@ public class Handler {
     }
   }
 
-  public static void handleTransactionReport(Bioskop cinema) {
+  public static void handleTransactionReport(Cinema cinema) {
     System.out.println("=".repeat(20) + " Laporan Transaksi " + "=".repeat(20));
     System.out.println(cinema.transactionReport().message);
   }
 
-  public static boolean handleMenu(Scanner scanner, String menu, Bioskop cinema) {
+  public static boolean handleMenu(Scanner scanner, String menu, Cinema cinema) {
+    menu = menu.toUpperCase();
     switch (menu) {
       case "A":
         handleBookSeat(scanner, cinema);
@@ -115,13 +116,14 @@ public class Handler {
       case "D":
         handleTransactionReport(cinema);
         break;
-      case "exit":
+      case "EXIT":
         return true;
       default:
         System.out.println("Menu tidak ditemukan");
         break;
     }
     return false;
+
   }
 
 }

@@ -6,24 +6,24 @@ import org.junit.Test;
 
 import helper.Response;
 
-public class BioskopTest {
+public class CinemaTest {
   @Test
   public void testBookedSeat() {
-    Bioskop cinema = new Bioskop('A', 10);
+    Cinema cinema = new Cinema('A', 10);
     Response res = cinema.bookSeat("A1");
     assertEquals("kursi berhasil dipesan", res.message);
   }
 
   @Test
   public void testBookInvalidSeat() {
-    Bioskop cinema = new Bioskop('A', 10);
+    Cinema cinema = new Cinema('A', 10);
     Response res = cinema.bookSeat("A11");
     assertEquals("kursi tidak ditemukan", res.message);
   }
 
   @Test
   public void testBookBookedSeat() {
-    Bioskop cinema = new Bioskop('A', 10);
+    Cinema cinema = new Cinema('A', 10);
     Response res = cinema.bookSeat("A1");
 
     res = cinema.bookSeat("A1");
@@ -32,7 +32,7 @@ public class BioskopTest {
 
   @Test
   public void testCancelBookedSeat() {
-    Bioskop cinema = new Bioskop('A', 10);
+    Cinema cinema = new Cinema('A', 10);
     Response res = cinema.bookSeat("A1");
 
     res = cinema.cancelSeat("A1");
@@ -41,14 +41,14 @@ public class BioskopTest {
 
   @Test
   public void testCancelInvalidSeat() {
-    Bioskop cinema = new Bioskop('A', 10);
+    Cinema cinema = new Cinema('A', 10);
     Response res = cinema.cancelSeat("A11");
     assertEquals("kursi tidak ditemukan", res.message);
   }
 
   @Test
   public void testCancelFreeSeat() {
-    Bioskop cinema = new Bioskop('A', 10);
+    Cinema cinema = new Cinema('A', 10);
     Response res = cinema.cancelSeat("A1");
     assertEquals("kursi belum dipesan", res.message);
   }

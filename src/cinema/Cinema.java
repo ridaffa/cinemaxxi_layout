@@ -5,10 +5,10 @@ import java.util.LinkedHashMap;
 
 import helper.Response;
 
-public class Bioskop {
+public class Cinema {
   LinkedHashMap<String, Seat> seats = new LinkedHashMap<String, Seat>();
 
-  public Bioskop(char seatCode, int seatNumber) {
+  public Cinema(char seatCode, int seatNumber) {
     for (int i = 1; i <= seatNumber; i++) {
       String seatName = seatCode + String.valueOf(i);
       Seat seat = new Seat();
