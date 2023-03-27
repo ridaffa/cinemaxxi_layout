@@ -1,9 +1,8 @@
 package cinema;
 
-import java.time.format.DateTimeFormatter;
 import java.util.LinkedHashMap;
 
-import helper.Response;
+import helper.*;
 
 public class Cinema {
   LinkedHashMap<String, Seat> seats = new LinkedHashMap<String, Seat>();
@@ -75,7 +74,7 @@ public class Cinema {
         Seat seat = seats.get(seatName);
         if (seat.isBooked) {
           totalSold++;
-          content += seatName + ", " + seat.bookedAt.format(DateTimeFormatter.ofPattern("dd-MMMM-yyyy HH:mm:ss"))
+          content += seatName + ", " + Helper.convertDate(seat.bookedAt)
               + "\n";
         } else {
           totalFree++;
