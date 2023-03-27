@@ -20,7 +20,7 @@ public class Cinema {
       String res = "";
       for (String seatName : seats.keySet()) {
         Seat seat = seats.get(seatName);
-        res += seatName + " - " + (seat.isBooked ? "SOLD" : "FREE") + "\n";
+        res += seatName + " - " + (seat.isBooked ? "Sold" : "Free") + "\n";
       }
       return new Response(res, false);
     } catch (Exception e) {
