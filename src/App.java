@@ -8,7 +8,7 @@ public class App {
         try {
             Scanner scanner = new Scanner(System.in);
             System.out.println("=".repeat(20)
-                    + " Selamat Datang (Cinema XXI), Silahkan masukkan konfigurasi denah studio " + "=".repeat(20));
+                    + " Selamat Datang (Cinema XXI), Silahkan masukkan konfigurasi denah A " + "=".repeat(20));
             char seatCode = Handler.getSeatCode(scanner);
             int seatNumber = Handler.getSeatNumber(scanner);
             System.out.println("=".repeat(20) + " Aplikasi Cinema XXI Layout (kursi tersedia " + seatCode + "-"
