@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import helper.Response;
 
-public class BisokopTest {
+public class BioskopTest {
   @Test
   public void testBookedSeat() {
     Bioskop cinema = new Bioskop('A', 10);
