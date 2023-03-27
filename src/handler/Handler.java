@@ -38,11 +38,16 @@ public class Handler {
     int seatNumber = 0;
     do {
       System.out.print("Masukkan Jumlah Kursi: ");
+      while (!scanner.hasNextInt()) {
+        System.out.println("Jumlah kursi harus berupa angka");
+        System.out.print("Masukkan Jumlah Kursi: ");
+        scanner.next();
+      }
       seatNumber = scanner.nextInt();
       if (seatNumber < 1 || seatNumber > MAX_SEAT) {
         System.out.println("Jumlah kursi minimal 1 dan maksimal 20");
       }
-    } while (seatNumber < 1 || seatNumber > 20 || !Helper.isInteger(String.valueOf(seatNumber)));
+    } while (seatNumber < 1 || seatNumber > 20);
     return seatNumber;
   }
 
