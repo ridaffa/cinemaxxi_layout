@@ -16,7 +16,7 @@ public class App {
                     + seatNumber + ") " + "=".repeat(20));
             Cinema cinema = new Cinema(seatCode, seatNumber);
             while (true) {
-                String menu = Handler.showMenu(scanner);
+                String menu = showMenu(scanner);
                 boolean exit = Handler.handleMenu(scanner, menu, cinema);
                 if (exit) {
                     break;
@@ -26,5 +26,18 @@ public class App {
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
+    }
+
+    public static String showMenu(Scanner scanner) {
+        System.out.println("=".repeat(20) + " Menu " + "=".repeat(20));
+        System.out.println("A) Pemesanan Kursi");
+        System.out.println("B) Batalkan Kursi");
+        System.out.println("C) Laporan Denah");
+        System.out.println("D) Laporan Transaksi");
+        System.out.println();
+        System.out.println("Masukkan `exit` untuk keluar");
+
+        System.out.print("Pilih menu: ");
+        return scanner.next();
     }
 }

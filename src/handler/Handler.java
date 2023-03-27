@@ -9,19 +9,6 @@ import helper.*;
 public class Handler {
   final static int MAX_SEAT = 20;
 
-  public static String showMenu(Scanner scanner) {
-    System.out.println("=".repeat(20) + " Menu " + "=".repeat(20));
-    System.out.println("A) Pemesanan Kursi");
-    System.out.println("B) Batalkan Kursi");
-    System.out.println("C) Laporan Denah");
-    System.out.println("D) Laporan Transaksi");
-    System.out.println();
-    System.out.println("Masukkan `exit` untuk keluar");
-
-    System.out.print("Pilih menu: ");
-    return scanner.next();
-  }
-
   public static char getSeatCode(Scanner scanner) {
     String seatCode;
     do {
