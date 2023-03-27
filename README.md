@@ -1,18 +1,38 @@
-## Getting Started
+# Cinema XXI Layout
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This project is a Java application that displays a layout of a Cinema XXI.
 
-## Folder Structure
+## Prerequisites
 
-The workspace contains two folders by default, where:
+- Java 20
+- Junit-platform-console-standalone-1.9.2.jar
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Compiling
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+To compile the project, run the following command:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+```
+javac -d bin -cp .\lib\* .\src\cinema\*.java .\src\handler\*.java .\src\helper\*.java .\src\App.java
+```
 
-## Dependency Management
+## Running
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+To run the app, execute the following command:
+
+```
+java -cp bin App
+```
+
+## Testing
+
+To compile the tests, run the following command:
+
+```
+javac -d test -cp .\lib\junit-platform-console-standalone-1.9.2.jar .\src\cinema\*.java .\src\helper\*.java
+```
+
+To run the tests, execute the following command:
+
+```
+java -jar .\lib\junit-platform-console-standalone-1.9.2.jar --class-path test --scan-class-path
+```
